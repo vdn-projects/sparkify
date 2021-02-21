@@ -106,7 +106,7 @@ I used our available Yarn cluster with infrastructure supporting Kafka, Spark, H
 * Top features contributing to `churn rate` are registered_days, rolling advert, etc. which are valuable information for product team to improve the service for better customer retention.
 
     <p align="left">
-        <img src="media/rf_feature_importance.png" width="70%">
+        <img src="media/rf_feature_importance.png" width="100%">
     </p>
 
 
