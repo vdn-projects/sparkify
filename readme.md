@@ -68,7 +68,7 @@ To ensure the deployment comparability, ensure below packages are in same versio
     ├───spark_streaming.py
     ├───data
     │   └───medium-sparkify-event-data.json.gz
-    ├───jupyter
+    └───jupyter
         └───sparkify.ipynb
     ```
 
@@ -80,6 +80,23 @@ To ensure the deployment comparability, ensure below packages are in same versio
     * `spark_streaming.py`: the Spark streaming application which consumes message from Kafka, transform and store on HDFS
     * `medium-sparkify-event-data.json.gz`: json data should be unzip when start testing. 
     * `deploy.sh`: shell script to quicly deploy the Spark application to our Yarn cluster.
+
+# How to run project
+I used our available Yarn cluster with infrastructure supporting Kafka, Spark, Hadoop services. This can be achievable with 
+[Amazon EMR - Big Data Platform](https://aws.amazon.com/emr/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc).
+
+- How to run the `Kafka producer`:
+    * Extract the `medium-sparkify-event-data.json.gz` in data folder
+    * Run `python kafka_producer.py --time_interval 1` to send every message per second
+
+- How to run `Spark streaming application`:
+    * At the current project, run `./deploy` script
+    * It will submit our pyspark application to Yarn cluster and start consume message sent from Kafka.
+
+- The running opration once executing above two commands can be seen as below:
+    <p align="left">
+        <img src="media/kafka_sparkify_producer.gif" width="70%">
+    </p>
 
 # Result summary
 * The business problem to solve: predict churn rate
@@ -94,6 +111,6 @@ To ensure the deployment comparability, ensure below packages are in same versio
 
 
 # References
-https://medium.com/@nutanbhogendrasharma/role-of-stringindexer-and-pipelines-in-pyspark-ml-feature-b79085bb8a6c
-https://towardsdatascience.com/machine-learning-with-pyspark-and-mllib-solving-a-binary-classification-problem-96396065d2aa
-https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
+* https://medium.com/@nutanbhogendrasharma/role-of-stringindexer-and-pipelines-in-pyspark-ml-feature-b79085bb8a6c
+* https://towardsdatascience.com/machine-learning-with-pyspark-and-mllib-solving-a-binary-classification-problem-96396065d2aa
+* https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
