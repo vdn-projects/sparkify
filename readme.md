@@ -1,5 +1,5 @@
 # Background and Motivation
-Spakify is a music streaming sevice as similar to Spotify. Every users' activities on Sparkify application are logged and sent to Kafka cluster. To improve the business, the data team will collect data to a Big Data Platform for further processing, analysing and extracting insights info for respective actions. One of the focusing topic is churn user prediction.
+Spakify is a music streaming sevice as similar to Spotify. Every users' activities on Sparkify application are logged and sent to Kafka cluster. To improve the business, the data team will collect data to a Big Data Platform for further processing, analysing and extracting insights info for respective actions. One of the focusing topic is churn user prediction. Detailed steps of how the problem is conducted in this [blog](https://vanducng.dev/2021/02/21/Churn-rate-prediction-on-Sparkify-service) and this [jupyter notebook](https://github.com/vdn-projects/sparkify/blob/main/jupyter/sparkify.ipynb).
 
 Predicting churn rates is a challenging and common problem that data scientists and analysts regularly encounter in any customer-facing business. Additionally, the ability to efficiently manipulate large datasets with Spark is one of the highest-demand skills in the field of data. 
 
