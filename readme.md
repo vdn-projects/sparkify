@@ -95,7 +95,7 @@ I used our available Yarn cluster with infrastructure supporting Kafka, Spark, H
 
 - The running opration once executing above two commands can be seen as below:
     <p align="left">
-        <img src="media/kafka_sparkify_producer.gif" width="70%">
+        <img src="media/kafka_sparkify_producer.gif" width="100%">
     </p>
 
 # Result summary
